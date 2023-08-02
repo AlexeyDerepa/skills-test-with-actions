@@ -26,5 +26,7 @@ jobs:
       
       - name: Run markdown lint
         run: |
+          sudo npm install -g n
+          sudo n 16.20.1
           npm install remark-cli remark-preset-lint-consistent
           npx remark . --use remark-preset-lint-consistent --frail     
